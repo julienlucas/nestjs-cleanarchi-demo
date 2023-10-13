@@ -15,7 +15,7 @@ export class TasksController {
   private logger = new Logger('TasksController', { timestamp: true });
 
   constructor(
-    private tasksService: TasksService
+    private tasksService: TasksService,
   ) {}
 
   @Get()
