@@ -1,7 +1,7 @@
 import { DataSource, Repository } from 'typeorm';
 import { ConflictException, Injectable, InternalServerErrorException } from '@nestjs/common';
-import { User } from './user.entity';
-import { AuthCrendentialsDto } from './dto/auth-credential.dto';
+import { User } from '@domain/entities/user.interface';
+import { AuthCrendentialsDto } from '@infrastructure/controllers/auth/auth-credential.dto';
 import * as bcrypt from 'bcrypt';
 
 @Injectable()

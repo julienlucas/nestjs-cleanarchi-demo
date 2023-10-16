@@ -1,10 +1,9 @@
 import { DataSource, Repository } from 'typeorm';
 import { Injectable, InternalServerErrorException } from '@nestjs/common';
-import { CreateTaskDto } from './dto/create-task.dto';
-import { GetTasksFilterDto } from './dto/get-tasks-filter.dto';
-import { TaskStatus } from './task-status.enum';
-import { Task } from './task.entity';
-import { User } from 'src/auth/user.entity';
+import { CreateTaskDto, GetTasksFilterDto } from '@infrastructure//controllers/tasks/tasks.dto';
+import { TaskStatus } from '@domain/enums/task-status.enum';
+import { Task } from '@domain/entities/task.interface';
+import { User } from '@domain/entities/user.interface';
 import { Logger } from '@nestjs/common';
 
 @Injectable()

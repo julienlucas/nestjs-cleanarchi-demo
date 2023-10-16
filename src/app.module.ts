@@ -1,9 +1,11 @@
 import { Module } from '@nestjs/common';
-import { TasksModule } from './tasks/tasks.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
-import { AuthModule } from './auth/auth.module';
 import { ConfigModule, ConfigService } from '@nestjs/config';
-import { configValidationSchema } from './config.schema';
+import { configValidationSchema } from '@/infrastructure/config/config.schema';
+import { LoggerModule } from '@infrastructure/logger/logger.module';
+import { ExceptionsModule } from '@infrastructure/exceptions/exceptions.module';
+import { TasksModule } from '@infrastructure/controllers/tasks/tasks.module';
+import { AuthModule } from '@infrastructure/controllers/auth/auth.module';
 
 @Module({
   imports: [
@@ -12,6 +14,8 @@ import { configValidationSchema } from './config.schema';
       envFilePath: [`.env.stage.${process.env.STAGE}`],
       validationSchema: configValidationSchema,
     }),
+    ExceptionsModule,
+    LoggerModule,
     TasksModule,
     TypeOrmModule.forRootAsync({
       imports: [ConfigModule],
