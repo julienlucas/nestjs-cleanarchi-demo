@@ -1,7 +1,6 @@
 ## Description
 
-Starter Nest.js in Clean Architecture
-[Nest](https://github.com/nestjs/nest) framework TypeScript starter repository.
+Starter [Nest.js](https://github.com/nestjs/nest) in Clean Architecture and TypeScript.
 
 ## Installation
 
