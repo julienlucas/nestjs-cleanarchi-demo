@@ -1,6 +1,7 @@
 ## Description
 
 Starter [Nest.js](https://github.com/nestjs/nest) in Clean Architecture and TypeScript.
+Just a basic Todo task app example.
 
 ## Installation
 
