@@ -3,6 +3,9 @@
 Starter [Nest.js](https://github.com/nestjs/nest) in Clean Architecture and TypeScript.
 Just a basic Todo task app example.
 
+## Swagger
+Swagger is available at : http://localhost:3000/api-docs
+
 ## Installation
 
 ```bash
